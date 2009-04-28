@@ -14,7 +14,7 @@ var konami = {
 	load: function(link) {
 		window.document.onkeydown = function(e) {
 			konami.input+= e.keyCode	
-			if (konami.input == "38384040373937396566656613") {
+			if (konami.input == "3838404037393739656613") {
 				konami.code(link)
 				clearTimeout(konami.clear)
 				}
