@@ -13,7 +13,7 @@ var konami = {
 	clear:setTimeout('konami.clear_input()',2000),
 	load: function(link) {
 		window.document.onkeydown = function(e) {
-			konami.input+= e.keyCode	
+			konami.input+= e ? e.keyCode : event.keyCode         	
 			if (konami.input == "3838404037393739666513") {
 				konami.code(link)
 				clearTimeout(konami.clear)
