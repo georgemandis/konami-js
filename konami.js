@@ -3,7 +3,7 @@
  * Code: http://konami-js.googlecode.com/
  * Examples: http://www.snaptortoise.com/konami-js
  * Copyright (c) 2009 George Mandis (georgemandis.com)
- * Version: 1.1.0 (05/30/2009)
+ * Version: 1.0.8 (05/08/2009)
  * Licensed under the Artistic License/GPL
  * http://dev.perl.org/licenses/
  * Tested in: Safari 4, Firefox 3, IE7 and Mobile Safari 2.2.1
@@ -41,7 +41,6 @@ var konami = {
 		keys:["UP","UP","DOWN","DOWN","LEFT","RIGHT","LEFT","RIGHT","TAP","TAP","TAP"],
 		code: function(link) { window.location=link},
 		load: function(link){
-			this.code = (!link) ? this.code : link;
 			document.ontouchmove = function(e){
 			  if(e.touches.length == 1 && konami.iphone.capture==true){ // Only deal with one finger
 			    var touch = e.touches[0]; // Get info for finger #1
@@ -70,7 +69,7 @@ var konami = {
 			result = (x_magnitude > y_magnitude) ? x : y;
 			result = (this.tap==true) ? "TAP" : result;			
 			if (result==this.keys[0]) this.keys = this.keys.slice(1,this.keys.length)
-			if (this.keys.length==0) this.code()
+			if (this.keys.length==0) this.code(this.link)
 			}
 		}
 }
