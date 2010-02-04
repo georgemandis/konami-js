@@ -12,33 +12,37 @@
 	* Tested in: Safari 4, Firefox 3, IE7 and Mobile Safari 2.2.1
 */
 
-
 var Konami = function() {
 	var konami= {
-			addEvent:function ( obj, type, fn )
+			addEvent:function ( obj, type, fn, ref_obj )
 			{
 				if (obj.addEventListener)
 					obj.addEventListener( type, fn, false );
 				else if (obj.attachEvent)
 				{
+					// IE
 					obj["e"+type+fn] = fn;
-					obj[type+fn] = function() { obj["e"+type+fn]( window.event ); }
+					obj[type+fn] = function() { obj["e"+type+fn]( window.event,ref_obj ); }
+	
 					obj.attachEvent( "on"+type, obj[type+fn] );
 				}
 			},
 	        input:"",
 	        pattern:"3838404037393739666513",
-	        load: function(link) {			
-				konami.addEvent(document,"keydown", function(e) {						
-            	konami.input+= e ? e.keyCode : event.keyCode;
+	        load: function(link) {	
+				
+				this.addEvent(document,"keydown", function(e,ref_obj) {											
+					if (ref_obj) konami = ref_obj; // IE
+					konami.input+= e ? e.keyCode : event.keyCode;
             	if (konami.input.indexOf(konami.pattern) != -1) {
                     konami.code(link);
 					konami.input="";
                    	return;
                     }
-            	});
+            	},this);
             this.iphone.load(link)
-	                },
+	                
+				},
 	        code: function(link) { window.location=link},
 	        iphone:{
 	                start_x:0,
@@ -84,4 +88,5 @@ var Konami = function() {
 	}
 	return konami;
 }
+
 
