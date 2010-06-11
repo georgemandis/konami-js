@@ -6,7 +6,7 @@
 	* Code: http://konami-js.googlecode.com/
 	* Examples: http://www.snaptortoise.com/konami-js
 	* Copyright (c) 2009 George Mandis (georgemandis.com, snaptortoise.com)
-	* Version: 1.3 (5/06/2010)
+	* Version: 1.31 (6/10/2010)
 	* Licensed under the GNU General Public License v3
 	* http://www.gnu.org/copyleft/gpl.html
 	* Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+ and Mobile Safari 2.2.1
@@ -34,12 +34,14 @@ var Konami = function() {
 				
 				this.addEvent(document,"keydown", function(e,ref_obj) {											
 					if (ref_obj) konami = ref_obj; // IE
-					konami.input+= e ? e.keyCode : event.keyCode;
+					konami.input+=e ? e.keyCode : event.keyCode;
+					// Reset if not matching
+					if (konami.pattern.indexOf(konami.input)) konami.input=""
             	if (konami.input.indexOf(konami.pattern) != -1) {
                     konami.code(link);
 					konami.input="";
                    	return;
-                    }
+									}
             	},this);
            this.iphone.load(link)
 	                
