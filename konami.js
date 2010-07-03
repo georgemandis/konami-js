@@ -53,10 +53,11 @@ var Konami = function() {
 	                stop_y:0,
 	                tap:false,
 	                capture:false,
+									orig_keys:"",
 	                keys:["UP","UP","DOWN","DOWN","LEFT","RIGHT","LEFT","RIGHT","TAP","TAP","TAP"],
 	                code: function(link) { konami.code(link);},
 	                load: function(link){
-
+										orig_keys = this.keys;
 	    							konami.addEvent(document,"touchmove",function(e){
 	                          if(e.touches.length == 1 && konami.iphone.capture==true){ 
 	                            var touch = e.touches[0]; 
@@ -84,8 +85,12 @@ var Konami = function() {
 	                        y = ((this.start_y-this.stop_y) < 0) ? "DOWN" : "UP";
 	                        result = (x_magnitude > y_magnitude) ? x : y;
 	                        result = (this.tap==true) ? "TAP" : result;                     
+
 	                        if (result==this.keys[0]) this.keys = this.keys.slice(1,this.keys.length)
-	                        if (this.keys.length==0) this.code(link)
+	                        if (this.keys.length==0) { 
+														this.keys=this.orig_keys;
+														this.code(link)
+														}
 	                        }
 	                }
 	}
