@@ -6,10 +6,10 @@
 	* Code: http://konami-js.googlecode.com/
 	* Examples: http://www.snaptortoise.com/konami-js
 	* Copyright (c) 2009 George Mandis (georgemandis.com, snaptortoise.com)
-	* Version: 1.3.2 (7/02/2010)
+	* Version: 1.3.3 (4/16/2011)
 	* Licensed under the GNU General Public License v3
 	* http://www.gnu.org/copyleft/gpl.html
-	* Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+ and Mobile Safari 2.2.1
+	* Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1 and Dolphin Browser
 */
 
 var Konami = function() {
@@ -30,8 +30,7 @@ var Konami = function() {
 	        input:"",
 	        pattern:"3838404037393739666513",
 		/*pattern:"38384040373937396665",*/
-	        load: function(link) {	
-				
+	        load: function(link) {					
 				this.addEvent(document,"keydown", function(e,ref_obj) {											
 					if (ref_obj) konami = ref_obj; // IE
 					konami.input+= e ? e.keyCode : event.keyCode;
@@ -53,11 +52,11 @@ var Konami = function() {
 	                stop_y:0,
 	                tap:false,
 	                capture:false,
-									orig_keys:"",
+					orig_keys:"",
 	                keys:["UP","UP","DOWN","DOWN","LEFT","RIGHT","LEFT","RIGHT","TAP","TAP","TAP"],
 	                code: function(link) { konami.code(link);},
 	                load: function(link){
-										orig_keys = this.keys;
+									this.orig_keys = this.keys;
 	    							konami.addEvent(document,"touchmove",function(e){
 	                          if(e.touches.length == 1 && konami.iphone.capture==true){ 
 	                            var touch = e.touches[0]; 
