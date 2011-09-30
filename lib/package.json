@@ -1,0 +1,18 @@
+{
+  "author": "George Mandis <george@snaptortoise.com> (http://georgemandis.com)",
+  "name": "konami",
+  "keywords": ["ender"],
+  "description": "A quick and silly script for adding the konami code easter egg to your site. Works with gestures on iPhone as well.",
+  "version": "1.3.3",
+  "homepage": "http://code.google.com/p/konami-js/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/georgemandis/konami-js.git"
+  },
+  "main": "konami",
+  "engines": {
+    "node": "~v0.4.8"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
