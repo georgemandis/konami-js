@@ -4,7 +4,7 @@ Konami-JS
 Every site should have an implementation of the Konami Code. It makes things more fun. If you're unfamiliar with it, the Konami Code is a "cheat code" that appeared in many of Konami's video games going all the way back to 1986.  It was typically entered on a Nintendo controller. Recently, ESPN received attention for the funny, flashy things that would happen when the code was entered on their website. Those shenanigans were the inspiration for whipping up this script.
 
 
-iOS & Android GesSupport
+iOS & Android Gesture Support
 =====================
 
 As of version 1.1, Konami-JS includes support for gestures on iOS and Android.  Technically the code for these is now "up, up, down, down, left, right, left, right, tap, tap, tap," on these devices but that's close enough!
