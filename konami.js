@@ -22,7 +22,6 @@ var Konami = function(callback) {
 					// IE
 					obj["e"+type+fn] = fn;
 					obj[type+fn] = function() { obj["e"+type+fn]( window.event,ref_obj ); }
-
 					obj.attachEvent( "on"+type, obj[type+fn] );
 				}
 			},
@@ -39,7 +38,7 @@ var Konami = function(callback) {
                    	return;
                     }
             	},this);
-           this.iphone.load(link)
+           this.iphone.load(link);
 
 				},
 	        code: function(link) { window.location=link},
@@ -69,25 +68,25 @@ var Konami = function(callback) {
 	                                if (konami.iphone.tap==true) konami.iphone.check_direction(link);           
 	                                },false);
 	                        konami.addEvent(document,"touchstart", function(evt){
-	                                konami.iphone.start_x = evt.changedTouches[0].pageX
-	                                konami.iphone.start_y = evt.changedTouches[0].pageY
-	                                konami.iphone.tap = true
-	                                konami.iphone.capture = true
+	                                konami.iphone.start_x = evt.changedTouches[0].pageX;
+	                                konami.iphone.start_y = evt.changedTouches[0].pageY;
+	                                konami.iphone.tap = true;
+	                                konami.iphone.capture = true;
 	                                });               
 	                                },
 	                check_direction: function(link){
-	                        x_magnitude = Math.abs(this.start_x-this.stop_x)
-	                        y_magnitude = Math.abs(this.start_y-this.stop_y)
+	                        x_magnitude = Math.abs(this.start_x-this.stop_x);
+	                        y_magnitude = Math.abs(this.start_y-this.stop_y);
 	                        x = ((this.start_x-this.stop_x) < 0) ? "RIGHT" : "LEFT";
 	                        y = ((this.start_y-this.stop_y) < 0) ? "DOWN" : "UP";
 	                        result = (x_magnitude > y_magnitude) ? x : y;
 	                        result = (this.tap==true) ? "TAP" : result;                     
 
-	                        if (result==this.keys[0]) this.keys = this.keys.slice(1,this.keys.length)
+	                        if (result==this.keys[0]) this.keys = this.keys.slice(1,this.keys.length);
 	                        if (this.keys.length==0) { 
-														this.keys=this.orig_keys;
-														this.code(link)
-														}
+								this.keys=this.orig_keys;
+								this.code(link);
+								}
 	                        }
 	                }
 	}
