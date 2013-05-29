@@ -41,11 +41,11 @@ This is why you do code reviews more often than once ever two years.
 
 To use your own custom cheat code you can use the `cheatCode()` function of the konami instance.
 
-  success = function() { 
-    console.log("Custom trigger!"); 
-  }
-  ko = new Konami(success);
-  ko.cheatCode(["LEFT", "RIGHT", "A", "B", "R", "RIGHT", "ENTER"]);
+	success = function() { 
+    		console.log("Custom trigger!"); 
+  	}
+  	ko = new Konami(success);
+  	ko.cheatCode(["LEFT", "RIGHT", "A", "B", "R", "RIGHT", "ENTER"]);
 
 `cheatCode()` automatically converts your cheat code into a format that can be used on touch devices as well.
 Direction keys are matched into swipes while uppercase letters and ENTER are matched into TAPS on touch devices.
