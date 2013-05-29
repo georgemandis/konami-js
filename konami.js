@@ -17,10 +17,10 @@ var Konami = function(callback) {
 			/**
 			 * This overrides the default cheat code of this konami instance.
 			 * Takes in an array of cheat codes that will be used for both default and touch devices.
-			 * Codes must be "UP", "DOWN", "LEFT", "RIGHT", "ENTER", or any single characters
+			 * Codes must be "UP", "DOWN", "LEFT", "RIGHT", "ENTER", or an uppercase letter
 			 * Example cheat code: ["UP", "DOWN", "LEFT", "RIGHT", "A", "C", "ENTER"]
 			 *
-			 * Note: When used on a mobile device, "ENTER" or any single characters just translate into a "TAP"
+			 * Note: When used on a mobile device, "ENTER" or any uppercase letter just translates into a "TAP"
 			 */
 			cheatCode: function(codeArray) {
 				// Adjust the code array for both our default code pattern and also iphone pattern
@@ -47,11 +47,15 @@ var Konami = function(callback) {
 						adjustedNormalCode += "13";
 						adjustedIphoneCode.push("TAP");
 					}else {
-						// If not in the list then we just use the char(code of the first letter)
-						adjustedNormalCode += code.charCodeAt(0).toString();
-						adjustedIphoneCode.push("TAP");
+						// Other than the above, only accepts upcase characters.
+						// If not an uppercase letter, then ignore code.
+						charCode = code.charCodeAt(0);
+						if (charCode >= 65 && charCode <= 90) {
+							adjustedNormalCode += charCode.toString();
+							adjustedIphoneCode.push("TAP");
+						}
 					}
-				};
+				}
 				this.pattern = adjustedNormalCode;
 				this.iphone.keys = adjustedIphoneCode;
 			},
