@@ -27,29 +27,29 @@ var Konami = function(callback) {
 				// The code for iphone should be pretty much same, except we change
 				// non-direction codes into just a tap.
 				adjustedNormalCode = "";
-				adjustedIphoneCode = []
+				adjustedIphoneCode = [];
 
 				for (var i = 0; i < codeArray.length; i++) {
 					code = codeArray[i];
 					if (code === "UP") {
-						adjustedNormalCode += "38"
-						adjustedIphoneCode.push(code)
+						adjustedNormalCode += "38";
+						adjustedIphoneCode.push(code);
 					}else if (code === "DOWN") {
 						adjustedNormalCode += "40";
-						adjustedIphoneCode.push(code)
+						adjustedIphoneCode.push(code);
 					}else if (code === "LEFT") {
 						adjustedNormalCode += "37";
-						adjustedIphoneCode.push(code)
+						adjustedIphoneCode.push(code);
 					}else if (code === "RIGHT") {
 						adjustedNormalCode += "39";
-						adjustedIphoneCode.push(code)
+						adjustedIphoneCode.push(code);
 					}else if (code === "ENTER") {
 						adjustedNormalCode += "13";
-						adjustedIphoneCode.push("TAP")
+						adjustedIphoneCode.push("TAP");
 					}else {
 						// If not in the list then we just use the char(code of the first letter)
 						adjustedNormalCode += code.charCodeAt(0).toString();
-						adjustedIphoneCode.push("TAP")
+						adjustedIphoneCode.push("TAP");
 					}
 				};
 				this.pattern = adjustedNormalCode;
