@@ -13,6 +13,52 @@
 
 var Konami = function(callback) {
 	var konami= {
+
+			/**
+			 * This overrides the default cheat code of this konami instance.
+			 * Takes in an array of cheat codes that will be used for both default and touch devices.
+			 * Codes must be "UP", "DOWN", "LEFT", "RIGHT", "ENTER", or an uppercase letter
+			 * Example cheat code: ["UP", "DOWN", "LEFT", "RIGHT", "A", "C", "ENTER"]
+			 *
+			 * Note: When used on a mobile device, "ENTER" or any uppercase letter just translates into a "TAP"
+			 */
+			cheatCode: function(codeArray) {
+				// Adjust the code array for both our default code pattern and also iphone pattern
+				// The code for iphone should be pretty much same, except we change
+				// non-direction codes into just a tap.
+				adjustedNormalCode = "";
+				adjustedIphoneCode = [];
+
+				for (var i = 0; i < codeArray.length; i++) {
+					code = codeArray[i];
+					if (code === "UP") {
+						adjustedNormalCode += "38";
+						adjustedIphoneCode.push(code);
+					}else if (code === "DOWN") {
+						adjustedNormalCode += "40";
+						adjustedIphoneCode.push(code);
+					}else if (code === "LEFT") {
+						adjustedNormalCode += "37";
+						adjustedIphoneCode.push(code);
+					}else if (code === "RIGHT") {
+						adjustedNormalCode += "39";
+						adjustedIphoneCode.push(code);
+					}else if (code === "ENTER") {
+						adjustedNormalCode += "13";
+						adjustedIphoneCode.push("TAP");
+					}else {
+						// Other than the above, only accepts upcase characters.
+						// If not an uppercase letter, then ignore code.
+						charCode = code.charCodeAt(0);
+						if (charCode >= 65 && charCode <= 90) {
+							adjustedNormalCode += charCode.toString();
+							adjustedIphoneCode.push("TAP");
+						}
+					}
+				}
+				this.pattern = adjustedNormalCode;
+				this.iphone.keys = adjustedIphoneCode;
+			},
 			addEvent:function ( obj, type, fn, ref_obj )
 			{
 				if (obj.addEventListener)
