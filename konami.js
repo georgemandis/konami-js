@@ -32,27 +32,27 @@ var Konami = function(callback) {
 				for (var i = 0; i < codeArray.length; i++) {
 					code = codeArray[i];
 					if (code === "UP") {
-						adjustedCode += "38"
+						adjustedNormalCode += "38"
 						adjustedIphoneCode.push(code)
 					}else if (code === "DOWN") {
-						adjustedCode += "40";
+						adjustedNormalCode += "40";
 						adjustedIphoneCode.push(code)
 					}else if (code === "LEFT") {
-						adjustedCode += "37";
+						adjustedNormalCode += "37";
 						adjustedIphoneCode.push(code)
 					}else if (code === "RIGHT") {
-						adjustedCode += "39";
+						adjustedNormalCode += "39";
 						adjustedIphoneCode.push(code)
 					}else if (code === "ENTER") {
-						adjustedCode += "13";
+						adjustedNormalCode += "13";
 						adjustedIphoneCode.push("TAP")
 					}else {
 						// If not in the list then we just use the char(code of the first letter)
-						adjustedCode += code.charCodeAt(0).toString();
+						adjustedNormalCode += code.charCodeAt(0).toString();
 						adjustedIphoneCode.push("TAP")
 					}
 				};
-				this.pattern = adjustedCode;
+				this.pattern = adjustedNormalCode;
 				this.iphone.keys = adjustedIphoneCode;
 			},
 			addEvent:function ( obj, type, fn, ref_obj )
