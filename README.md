@@ -37,6 +37,21 @@ A passed string is assumed to be the URL to redirect to. A passed function will 
 This is why you do code reviews more often than once ever two years. 
 
 
+#### Custom Cheat Codes
+
+To use your own custom cheat code you can use the `cheatCode()` function of the konami instance.
+
+  success = function() { 
+    console.log("Custom trigger!"); 
+  }
+  ko = new Konami(success);
+  ko.cheatCode(["LEFT", "RIGHT", "A", "B", "R", "RIGHT", "ENTER"]);
+
+`cheatCode()` automatically converts your cheat code into a format that can be used on touch devices as well.
+Direction keys are matched into swipes while uppercase letters and ENTER are matched into TAPS on touch devices.
+The code array passed into `cheatCode()` must be one of `["UP", "DOWN", "LEFT", "RIGHT", "ENTER", [any uppercase letter from A-Z]`.
+
+
 #### Overview
 
 Every site should have an implementation of the Konami Code. It makes things more fun. If you're unfamiliar with it, the Konami Code is a "cheat code" that appeared in many of Konami's video games going all the way back to 1986.  It was typically entered on a Nintendo controller. Recently, ESPN received attention for the funny, flashy things that would happen when the code was entered on their website. Those shenanigans were the inspiration for whipping up this script.
