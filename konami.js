@@ -98,4 +98,4 @@ var Konami = function(callback) {
 	}
 
 	return konami;
-}
+};
