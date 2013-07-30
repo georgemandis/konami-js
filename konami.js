@@ -26,7 +26,7 @@ var Konami = function(callback) {
 				}
 			},
 	        input:"",
-	        pattern:"3838404037393739666513",		
+	        pattern:"38384040373937396665",		
 	        load: function(link) {					
 				this.addEvent(document,"keydown", function(e,ref_obj) {											
 					if (ref_obj) konami = ref_obj; // IE
@@ -50,7 +50,7 @@ var Konami = function(callback) {
 	                tap:false,
 	                capture:false,
 					orig_keys:"",
-	                keys:["UP","UP","DOWN","DOWN","LEFT","RIGHT","LEFT","RIGHT","TAP","TAP","TAP"],
+	                keys:["UP","UP","DOWN","DOWN","LEFT","RIGHT","LEFT","RIGHT","TAP","TAP"],
 	                code: function(link) { konami.code(link);},
 	                load: function(link){
 									this.orig_keys = this.keys;
