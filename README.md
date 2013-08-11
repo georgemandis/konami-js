@@ -3,7 +3,7 @@ Konami-JS
 
 #### Important Update
 
-**NOTE:** I've decided to simplify the repository. Just the JavaScript file and the README, with some links to examples. 
+**NOTE:** I've decided to simplify the repository. Just the JavaScript file and the README with some links to examples. 
 
 Recently I started receiving requests to including Konami-JS in a variety of JavaScript module loaders. If that feature is important to you I'd encourage you to fork the repo and implement it yourself &mdash; I have no plans of introducing anything like that here.
 
