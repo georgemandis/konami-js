@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Konami-js by snaptortoise</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Konami-js</h1>
+        <p>A quick and silly script for adding the konami code easter egg to your site.  Works with gestures on iPhone as well.  Examples can be find at the Google Code site.</p>
+
+        <p class="view"><a href="https://github.com/snaptortoise/konami-js">View the Project on GitHub <small>snaptortoise/konami-js</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/snaptortoise/konami-js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/snaptortoise/konami-js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/snaptortoise/konami-js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h4>
+<a name="important-update" class="anchor" href="#important-update"><span class="octicon octicon-link"></span></a>Important Update</h4>
+
+<p><strong>NOTE:</strong> I've decided to simplify the repository. Just the JavaScript file and the README with some links to examples. </p>
+
+<p>Recently I started receiving requests to including Konami-JS in a variety of JavaScript module loaders. If that feature is important to you I'd encourage you to fork the repo and implement it yourself — I have no plans of introducing anything like that here.</p>
+
+<h4>
+<a name="simplified-implementation" class="anchor" href="#simplified-implementation"><span class="octicon octicon-link"></span></a>Simplified Implementation</h4>
+
+<p>Previously the simplest version of a Konami-JS implementation looked like this:</p>
+
+<pre><code>var easter_egg = new Konami().
+easter_egg.load('http://your-special-easter-egg-website.com')
+</code></pre>
+
+<p>This would redirect the user to a specified website upon successfully completing the Konami Code.</p>
+
+<p>You could also pass along a function to execute when the easter egg is completed. The simplest version of that looked like this:</p>
+
+<pre><code>var easter_egg = new Konami();
+easter_egg.code = function() { alert('Konami code!'); }
+easter_egg.load();
+</code></pre>
+
+<p>That is even sillier than the other implementation. </p>
+
+<p>You can now set  either the URL to redirect to OR the function to execute when you instantiate the class:</p>
+
+<pre><code>var easter_egg = new Konami('http://your-special-easter-egg-website.com');
+</code></pre>
+
+<p>OR:</p>
+
+<pre><code>var easter_egg = new Konami(function() { alert('Konami code!')});
+</code></pre>
+
+<p>A passed string is assumed to be the URL to redirect to. A passed function will be executed when the code is successfully entered:</p>
+
+<p>This is why you do code reviews more often than once ever two years. </p>
+
+<h4>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h4>
+
+<p>Every site should have an implementation of the Konami Code. It makes things more fun. If you're unfamiliar with it, the Konami Code is a "cheat code" that appeared in many of Konami's video games going all the way back to 1986.  It was typically entered on a Nintendo controller. Recently, ESPN received attention for the funny, flashy things that would happen when the code was entered on their website. Those shenanigans were the inspiration for whipping up this script.</p>
+
+<h4>
+<a name="gesture-support" class="anchor" href="#gesture-support"><span class="octicon octicon-link"></span></a>Gesture Support</h4>
+
+<p>As of version 1.1, Konami-JS includes support for gestures on iOS and Android devices.  Technically the code becomes "up, up, down, down, left, right, left, right, tap, tap, tap," on these devices but that's close enough!</p>
+
+<p>Support for touch gestures is automatically loaded when <code>konami.load()</code> is called.  See the <a href="http://snaptortoise.com/konami-js">example page</a> for details on how to deliver touch-specific easter eggs.</p>
+
+<h1>
+<a name="as-seen-on" class="anchor" href="#as-seen-on"><span class="octicon octicon-link"></span></a>As Seen On...</h1>
+
+<ul>
+<li>Newsweek</li>
+<li>Marvel</li>
+<li><a href="http://mashable.com/2010/07/31/konami-code-sites">Almost half the sites in this Mashable article</a></li>
+<li><a href="http://uxdesign.smashingmagazine.com/2012/04/26/gamification-ux-users-win-lose/">Smashing Magazine</a></li>
+<li>...and MANY more!</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/snaptortoise">snaptortoise</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
