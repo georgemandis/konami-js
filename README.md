@@ -11,7 +11,7 @@ Recently I started receiving requests to including Konami-JS in a variety of Jav
 
 Previously the simplest version of a Konami-JS implementation looked like this:
 
-	var easter_egg = new Konami().
+	var easter_egg = new Konami();
 	easter_egg.load('http://your-special-easter-egg-website.com')
 	
 This would redirect the user to a specified website upon successfully completing the Konami Code.
