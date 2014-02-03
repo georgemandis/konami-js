@@ -1,4 +1,5 @@
-/*
+/**
+ * @fileoverview
  * Konami-JS ~ 
  * :: Now with support for touch events and multiple instances for 
  * :: those situations that call for multiple easter eggs!
@@ -10,6 +11,10 @@
  * Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1 and Dolphin Browser
  */
 
+/**
+ * @param {Function|string=} callback
+ * @constructor
+ */
 var Konami = function (callback) {
 	var konami = {
 		addEvent: function (obj, type, fn, ref_obj) {
@@ -26,6 +31,11 @@ var Konami = function (callback) {
 		},
 		input: "",
 		pattern: "38384040373937396665",
+
+		/**
+		 * @param {string=} link
+		 * @public
+		 */
 		load: function (link) {
 			this.addEvent(document, "keydown", function (e, ref_obj) {
 				if (ref_obj) konami = ref_obj; // IE
@@ -41,9 +51,15 @@ var Konami = function (callback) {
 			}, this);
 			this.iphone.load(link);
 		},
+
+		/**
+		 * @type {Function}
+		 * @public
+		 */
 		code: function (link) {
 			window.location = link
 		},
+
 		iphone: {
 			start_x: 0,
 			start_y: 0,
@@ -53,9 +69,19 @@ var Konami = function (callback) {
 			capture: false,
 			orig_keys: "",
 			keys: ["UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "TAP", "TAP"],
+
+			/**
+			 * @type {Function}
+			 * @public
+			 */
 			code: function (link) {
 				konami.code(link);
 			},
+
+			/**
+			 * @param {string=} link
+			 * @public
+			 */
 			load: function (link) {
 				this.orig_keys = this.keys;
 				konami.addEvent(document, "touchmove", function (e) {
