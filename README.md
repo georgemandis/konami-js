@@ -47,6 +47,12 @@ As of version 1.1, Konami-JS includes support for gestures on iOS and Android de
 
 Support for touch gestures is automatically loaded when `konami.load()` is called.  See the [example page](http://snaptortoise.com/konami-js) for details on how to deliver touch-specific easter eggs.
 
+#### Coffeescript
+
+If you'd prefer to use a coffeescript version you can find one here:
+
+[https://github.com/camray/konami-coffee](https://github.com/camray/konami-coffee)
+
 As Seen On...
 =============
 
