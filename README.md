@@ -60,4 +60,5 @@ As Seen On...
   * Marvel
   * [Almost half the sites in this Mashable article](http://mashable.com/2010/07/31/konami-code-sites)
   * [Smashing Magazine](http://uxdesign.smashingmagazine.com/2012/04/26/gamification-ux-users-win-lose/)
+  * [The History of Gaming Conventions](http://www.bigfishgames.com/daily/gaming-conventions-timeline/)
   * ...and MANY more!
