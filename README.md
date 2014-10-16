@@ -43,7 +43,7 @@ Every site should have an implementation of the Konami Code. It makes things mor
 
 #### Gesture Support
 
-As of version 1.1, Konami-JS includes support for gestures on iOS and Android devices.  Technically the code becomes "up, up, down, down, left, right, left, right, tap, tap, tap," on these devices but that's close enough!
+As of version 1.1, Konami-JS includes support for gestures on iOS and Android devices.  Technically the code becomes "up, up, down, down, left, right, left, right, tap, tap" on these devices but that's close enough!
 
 Support for touch gestures is automatically loaded when `konami.load()` is called.  See the [example page](http://snaptortoise.com/konami-js) for details on how to deliver touch-specific easter eggs.
 
