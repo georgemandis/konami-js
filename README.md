@@ -11,26 +11,34 @@ Recently I started receiving requests to including Konami-JS in a variety of Jav
 
 Previously the simplest version of a Konami-JS implementation looked like this:
 
-	var easter_egg = new Konami();
-	easter_egg.load('http://your-special-easter-egg-website.com')
-	
+```javascript
+var easter_egg = new Konami();
+easter_egg.load('http://your-special-easter-egg-website.com')
+```
+
 This would redirect the user to a specified website upon successfully completing the Konami Code.
 
 You could also pass along a function to execute when the easter egg is completed. The simplest version of that looked like this:
 
-	var easter_egg = new Konami();
-	easter_egg.code = function() { alert('Konami code!'); }
-	easter_egg.load();
+```javascript
+var easter_egg = new Konami();
+easter_egg.code = function() { alert('Konami code!'); }
+easter_egg.load();
+```
 
 That is even sillier than the other implementation. 
 
 You can now set  either the URL to redirect to OR the function to execute when you instantiate the class:
 
-	var easter_egg = new Konami('http://your-special-easter-egg-website.com');
+```javascript
+var easter_egg = new Konami('http://your-special-easter-egg-website.com');
+```	
 	
 OR:
 
-	var easter_egg = new Konami(function() { alert('Konami code!')});
+```javascript
+var easter_egg = new Konami(function() { alert('Konami code!')});
+```
 
 A passed string is assumed to be the URL to redirect to. A passed function will be executed when the code is successfully entered:
 
