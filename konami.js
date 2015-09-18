@@ -29,7 +29,7 @@ var Konami = function (callback) {
 		load: function (link) {
 			this.addEvent(document, "keydown", function (e, ref_obj) {
 				if (ref_obj) konami = ref_obj; // IE
-				konami.input += e ? e.keyCode : event.keyCode;
+				konami.input += e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
 				if (konami.input.length > konami.pattern.length)
 					konami.input = konami.input.substr((konami.input.length - konami.pattern.length));
 				if (konami.input == konami.pattern) {
