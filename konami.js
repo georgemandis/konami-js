@@ -20,7 +20,7 @@ var Konami = function (callback) {
 				obj["e" + type + fn] = fn;
 				obj[type + fn] = function () {
 					obj["e" + type + fn](window.event, ref_obj);
-				}
+				};
 				obj.attachEvent("on" + type, obj[type + fn]);
 			}
 		},
@@ -56,6 +56,11 @@ var Konami = function (callback) {
 			code: function (link) {
 				konami.code(link);
 			},
+      touchCapture: function(evt) {
+				konami.iphone.start_x = evt.changedTouches[0].pageX;
+				konami.iphone.start_y = evt.changedTouches[0].pageY;
+				konami.iphone.capture = true;        
+      },
 			load: function (link) {
 				this.orig_keys = this.keys;
 				konami.addEvent(document, "touchmove", function (e) {
@@ -67,15 +72,11 @@ var Konami = function (callback) {
 					}
 				});
 				konami.addEvent(document, "touchend", function (evt) {
-					konami.iphone.stop_x = evt.changedTouches[0].pageX;
-					konami.iphone.stop_y = evt.changedTouches[0].pageY;
-					konami.iphone.capture = false;
+					konami.touchCapture(evt);
 					konami.iphone.check_direction(link);
 				}, false);
 				konami.addEvent(document, "touchstart", function (evt) {
-					konami.iphone.start_x = evt.changedTouches[0].pageX;
-					konami.iphone.start_y = evt.changedTouches[0].pageY;
-					konami.iphone.capture = true;
+					konami.touchCapture(evt);
 				});
 			},
 			check_direction: function (link) {
