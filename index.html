@@ -28,19 +28,14 @@
         </ul>
       </header>
       <section>
-        <h4>
-<a name="important-update" class="anchor" href="#important-update"><span class="octicon octicon-link"></span></a>Important Update</h4>
 
-<p><strong>NOTE:</strong> I've decided to simplify the repository. Just the JavaScript file and the README with some links to examples. </p>
-
-<p>Recently I started receiving requests to including Konami-JS in a variety of JavaScript module loaders. If that feature is important to you I'd encourage you to fork the repo and implement it yourself — I have no plans of introducing anything like that here.</p>
 
 <h4>
 <a name="simplified-implementation" class="anchor" href="#simplified-implementation"><span class="octicon octicon-link"></span></a>Simplified Implementation</h4>
 
 <p>Previously the simplest version of a Konami-JS implementation looked like this:</p>
 
-<pre><code>var easter_egg = new Konami().
+<pre><code>var easter_egg = new Konami();
 easter_egg.load('http://your-special-easter-egg-website.com')
 </code></pre>
 
@@ -92,13 +87,6 @@ easter_egg.load();
 <li>...and MANY more!</li>
 </ul>
 
-<p>
-	This silly script brought to you by:
-</p>
-
-<p style='text-align:center'>
-	<a href="http://snaptortoise"><img src="snaptortoise-logo" alt="Snaptortoise Web Development" height=200/></a>
-</p>
 
       </section>
       <footer>
@@ -106,6 +94,8 @@ easter_egg.load();
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
+    <script src="konami.js"></script>
+    <script src="easteregg.js"></script>
     <script src="javascripts/scale.fix.js"></script>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
