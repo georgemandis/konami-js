@@ -2,7 +2,7 @@
  * Konami-JS ~ 
  * :: Now with support for touch events and multiple instances for 
  * :: those situations that call for multiple easter eggs!
- * Code: http://konami-js.googlecode.com/
+ * Code: https://github.com/snaptortoise/konami-js
  * Examples: http://www.snaptortoise.com/konami-js
  * Copyright (c) 2009 George Mandis (georgemandis.com, snaptortoise.com)
  * Version: 1.4.5 (3/2/2016)
