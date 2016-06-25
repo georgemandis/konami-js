@@ -1,0 +1,48 @@
+body {
+  background: #fefefe;
+  font-family: 'Source Sans Pro', Helvetica, sans !important;
+  font-weight: 300; }
+
+code, pre {
+  font-family: 'Source Code Pro', Monaco, monospace !important; }
+
+.primary-header {
+  background: #43B08D;
+  color: #eee;
+  position: relative;
+  font-size: 1.8em;
+  animation: colors 20s linear infinite alternate;
+  padding: 1em 0;
+  border: 10px #000 solid;
+  border-left: 0;
+  border-right: 0; }
+  .primary-header .header-text {
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25); }
+    .primary-header .header-text a {
+      color: #fff; }
+  .primary-header h1 {
+    text-transform: uppercase;
+    font-family: 'Source Code Pro', Monaco, monospace !important;
+    font-weight: 100;
+    font-size: 2.5em; }
+  .primary-header .container {
+    z-index: 99; }
+
+.moving-background {
+  background: url(../images/diagonal_striped_brick_@2X.png);
+  animation: bgscroll-vertical 15s infinite linear; }
+
+.primary-content {
+  font-size: 1.5em;
+  padding: 1em 0; }
+
+@keyframes bgscroll-vertical {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 300px 300px; } }
+@keyframes colors {
+  0% {
+    background: rgba(67, 176, 141, 0.75); }
+  100% {
+    background: rgba(102, 0, 183, 0.5); } }

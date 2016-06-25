@@ -1,0 +1,8 @@
+# Site settings
+title: Konami-JS
+email: info@snaptortoise.com
+description: > # The original JavaScript easter-egg script.
+baseurl: "" # the subpath of your site, e.g. /blog/
+
+# Build settings
+markdown: kramdown

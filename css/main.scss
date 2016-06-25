@@ -1,0 +1,91 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+body {
+  background:#fefefe;
+  font-family: 'Source Sans Pro', Helvetica, sans !important;
+  font-weight:300;
+}
+
+code,pre {
+  font-family: 'Source Code Pro', Monaco, monospace !important;  
+}
+
+
+.primary-header {
+  background:#43B08D;
+  color:#eee;
+  position:relative;  
+  font-size:1.8em;
+  animation: colors 20s linear infinite alternate;
+  padding:1em 0;
+  border:10px #000 solid;
+  border-left:0;
+  border-right:0;
+
+  .header-text {
+    text-shadow:0px 2px 0px rgba(0,0,0,.25);
+    a {
+      color:#fff;
+    }
+  }
+  
+  h1 {
+    text-transform:uppercase;
+    font-family: 'Source Code Pro', Monaco, monospace !important;  
+    font-weight:100;    
+    font-size:2.5em;
+//    font-size:3.5em;
+  }
+  
+  
+//  a.btn {
+//    color:inherit !important;
+//  }
+    
+  .container {
+    z-index:99;
+  }
+}
+
+.moving-background {
+  background:url(../images/diagonal_striped_brick_@2X.png);
+//  background-position:100px 0;
+  animation: bgscroll-vertical 15s infinite linear;
+//  background-size:100px;
+//  position: absolute;
+//  top:0;
+//  left:0;
+//  width:100%;
+//  height:100%;
+//  opacity:.3;
+}
+
+.primary-content {
+  font-size:1.5em;
+  padding:1em 0;
+}
+
+@keyframes bgscroll-vertical {
+    0% {
+      background-position:0 0;     
+    }
+    100% {      
+      background-position:300px 300px;
+    }
+  }  
+  
+@keyframes colors {
+    0% {
+      background:rgba(#43B08D, .75);
+    }
+    100% {      
+      background:rgba(#6600B7, .5);
+    }
+  }  
+  
+  
