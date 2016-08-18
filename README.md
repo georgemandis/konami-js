@@ -13,7 +13,6 @@ Notable instances of Konami-JS in the wild include:
   * [The History of Gaming Conventions](http://www.bigfishgames.com/daily/gaming-conventions-timeline/)
   * ...and MANY more!
 
-
 ## Forks
 If you'd prefer to use a coffeescript version you can find one here:
 
