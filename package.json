@@ -18,5 +18,16 @@
     "test",
     "tests"
   ],
-  "version": "1.4.6"
+  "version": "1.4.7",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snaptortoise/konami-js.git"
+  },
+  "author": "George Mandis",
+  "bugs": {
+    "url": "https://github.com/snaptortoise/konami-js/issues"
+  }
 }
