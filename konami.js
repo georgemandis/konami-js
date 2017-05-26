@@ -53,6 +53,7 @@ var Konami = function (callback) {
 			capture: false,
 			orig_keys: "",
 			keys: ["UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "TAP", "TAP"],
+			input: [],
 			code: function (link) {
 				konami.code(link);
 			},
@@ -65,11 +66,25 @@ var Konami = function (callback) {
 						konami.iphone.stop_y = touch.pageY;
 						konami.iphone.tap = false;
 						konami.iphone.capture = false;
-						konami.iphone.check_direction();
 					}
 				});
 				konami.addEvent(document, "touchend", function (evt) {
-					if (konami.iphone.tap == true) konami.iphone.check_direction(link);
+					konami.iphone.input.push(konami.iphone.check_direction());
+
+					if (konami.iphone.input.length > konami.iphone.keys.length)
+						konami.iphone.input.shift();
+
+					if (konami.iphone.input.length === konami.iphone.keys.length) {
+						var match = true;
+						for (var i = 0; i < konami.iphone.keys.length; i++) {
+							if (konami.iphone.input[i] !== konami.iphone.keys[i]) {
+								match = false;
+							}
+						}
+						if (match) {
+							konami.iphone.code(link);
+						}
+					}
 				}, false);
 				konami.addEvent(document, "touchstart", function (evt) {
 					konami.iphone.start_x = evt.changedTouches[0].pageX;
@@ -78,19 +93,14 @@ var Konami = function (callback) {
 					konami.iphone.capture = true;
 				});
 			},
-			check_direction: function (link) {
+			check_direction: function () {
 				x_magnitude = Math.abs(this.start_x - this.stop_x);
 				y_magnitude = Math.abs(this.start_y - this.stop_y);
 				x = ((this.start_x - this.stop_x) < 0) ? "RIGHT" : "LEFT";
 				y = ((this.start_y - this.stop_y) < 0) ? "DOWN" : "UP";
 				result = (x_magnitude > y_magnitude) ? x : y;
 				result = (this.tap == true) ? "TAP" : result;
-
-				if (result == this.keys[0]) this.keys = this.keys.slice(1, this.keys.length);
-				if (this.keys.length == 0) {
-					this.keys = this.orig_keys;
-					this.code(link);
-				}
+				return result;
 			}
 		}
 	}
