@@ -113,3 +113,6 @@ var Konami = function (callback) {
 
 	return konami;
 };
+
+module.exports = Konami;
+
