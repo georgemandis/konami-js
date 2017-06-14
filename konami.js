@@ -113,3 +113,16 @@ var Konami = function (callback) {
 
 	return konami;
 };
+
+
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = Konami;
+} else {
+    if (typeof define === 'function' && define.amd) {
+        define([], function() {
+            return Konami;
+        });
+    } else {
+        window.Konami = Konami;
+    }
+}
