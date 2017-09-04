@@ -1,6 +1,6 @@
 /*
- * Konami-JS ~ 
- * :: Now with support for touch events and multiple instances for 
+ * Konami-JS ~
+ * :: Now with support for touch events and multiple instances for
  * :: those situations that call for multiple easter eggs!
  * Code: https://github.com/snaptortoise/konami-js
  * Examples: http://www.snaptortoise.com/konami-js
@@ -32,7 +32,7 @@ var Konami = function (callback) {
 				konami.input += e ? e.keyCode : event.keyCode;
 				if (konami.input.length > konami.pattern.length)
 					konami.input = konami.input.substr((konami.input.length - konami.pattern.length));
-				if (konami.input == konami.pattern) {
+				if (konami.input === konami.pattern) {
 					konami.code(link);
 					konami.input = "";
 					e.preventDefault();
@@ -60,7 +60,7 @@ var Konami = function (callback) {
 			load: function (link) {
 				this.orig_keys = this.keys;
 				konami.addEvent(document, "touchmove", function (e) {
-					if (e.touches.length == 1 && konami.iphone.capture == true) {
+					if (e.touches.length === 1 && konami.iphone.capture === true) {
 						var touch = e.touches[0];
 						konami.iphone.stop_x = touch.pageX;
 						konami.iphone.stop_y = touch.pageY;
@@ -99,7 +99,7 @@ var Konami = function (callback) {
 				x = ((this.start_x - this.stop_x) < 0) ? "RIGHT" : "LEFT";
 				y = ((this.start_y - this.stop_y) < 0) ? "DOWN" : "UP";
 				result = (x_magnitude > y_magnitude) ? x : y;
-				result = (this.tap == true) ? "TAP" : result;
+				result = (this.tap === true) ? "TAP" : result;
 				return result;
 			}
 		}
