@@ -127,13 +127,13 @@ var Konami = function (callback) {
 
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = Konami;
+		module.exports = Konami;
 } else {
-    if (typeof define === 'function' && define.amd) {
-        define([], function() {
-            return Konami;
-        });
-    } else {
-        window.Konami = Konami;
-    }
+		if (typeof define === 'function' && define.amd) {
+				define([], function() {
+						return Konami;
+				});
+		} else {
+				window.Konami = Konami;
+		}
 }
