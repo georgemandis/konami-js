@@ -74,7 +74,7 @@ var Konami = function (callback) {
 			},
 			touchmoveHandler: function (e) {
 				if (e.touches.length === 1 && konami.iphone.capture === true) {
-					const touch = e.touches[0];
+					var touch = e.touches[0];
 					konami.iphone.stop_x = touch.pageX;
 					konami.iphone.stop_y = touch.pageY;
 					konami.iphone.tap = false;
@@ -99,7 +99,7 @@ var Konami = function (callback) {
 				konami.addEvent(document, "touchend", this.toucheendHandler, false);
 				konami.addEvent(document, "touchstart", this.touchstartHandler);
 			},
-			unload() {
+			unload: function () {
 				konami.removeEvent(document, 'touchmove', this.touchmoveHandler);
 				konami.removeEvent(document, 'touchend', this.toucheendHandler);
 				konami.removeEvent(document, 'touchstart', this.touchstartHandler);
