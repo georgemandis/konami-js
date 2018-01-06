@@ -5,11 +5,19 @@ Add the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) as an easter eg
 For example and additional information please visit: [http://snaptortoise.github.io/konami-js/]
 (http://snaptortoise.github.io/konami-js/)
 
-To install you can:
+## Install
 
 - [Download the latest source](https://github.com/snaptortoise/konami-js/archive/master.zip) and include konami.js in your project
 - Install with npm: `npm install konami`
 - Install with bower: `bower install konami-js`
+
+## Future Improvements
+
+Konami-JS is an ancient project by JavaScript standards, having started in 2009! I would love for 2018 to be the year it gets rewritten in a more modern, ES6-friendly way while incorporating something like [Babel](https://babeljs.io) to ensure backwards compatibility in older browsers.
+
+I would love the community's help in any of this 😃
+
+You can watch [me](https://george.mand.is) talk about the history of Konami-JS and the value of maintaining "frivolous" open-source projects at OdessaJS 2017 here: [https://www.youtube.com/embed/F3xI3ps7syI](https://www.youtube.com/embed/F3xI3ps7syI)</p>
 
 
 Notable instances of Konami-JS in the wild include:
