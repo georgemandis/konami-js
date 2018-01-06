@@ -46,3 +46,8 @@ code, pre {
     background: rgba(67, 176, 141, 0.75); }
   100% {
     background: rgba(102, 0, 183, 0.5); } }
+.notice {
+  padding: 1em;
+  background: #FFDC00; }
+  .notice a {
+    text-decoration: underline; }

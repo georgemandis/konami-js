@@ -41,19 +41,21 @@
         <h3>About This Project</h3>
 <p>Every site should have an implementation of the Konami Code. It makes things more fun! If you're unfamiliar with it, the Konami Code is a "cheat code" that appeared in many of Konami's video games going all the way back to 1986.  It was typically entered on a Nintendo controller. Now it's often used on websites to show silly things to visitors when the code is "unlocked."</p>
 
-<p>Konami-JS includes support for gestures on smartphones and tablets.  Technically the code becomes "up, up, down, down, left, right, left, right, tap, tap, tap," on these devices but... that's close enough!</p>
+<p>Konami-JS includes support for gestures on smartphones and tablets.  Technically the code becomes "up, up, down, down, left, right, left, right, tap, tap," on these devices but... that's close enough!</p>
 
 <p>Support for touch gestures is automatically loaded when <code>konami.load()</code> is called.</p>
 
 <h3>Installing</h3>
 
-<p>You can install Konami-JS using <a href='https://bower.io'>Bower</a> like so:</p>
+<p>You can install Konami-JS several ways with <a href="http://npmjs.com">npm</a>:</p>
+
+<pre><code>npm install konami</code></pre>
+
+<p>Or with <a href="https://bower.io">Bower</a>:</p>
 
 <pre><code>bower install konami-js</code></pre>
 
-<p>You can also <a href='https://github.com/snaptortoise/konami-js/archive/master.zip'>download the files</a> from GitHub and stick <code>konami.js</code> in your project.</p>
-
-<pre><code>bower install konami-js</code></pre>
+<p>Or you can <a href='https://github.com/snaptortoise/konami-js/archive/master.zip'>download the files</a> from GitHub and stick <code>konami.js</code> in your project.</p>
 
 <h3>Getting Started</h3>
 <p>The simplest version of a Konami-JS implementation looks like this:</p>
@@ -61,7 +63,7 @@
 <pre><code>var easter_egg = new Konami('http://your-special-easter-egg-website.com');
 </code></pre>
 
-<p>This will redirect the usegr to a specified website upon successfully completing the Konami Code.</p>
+<p>This will redirect the user to a specified website upon successfully completing the Konami Code.</p>
 <p>You can also pass a function instead of a string:</p>
 
 <pre><code>var easter_egg = new Konami(function() { alert('Konami Code!')});
@@ -71,12 +73,25 @@
 
 <h3>Coming Soon</h3>
 <ul>
-  <li>How to present different easter eggs for gesture versus keyboard input.</li>
-  <li>How to override the default code for both keyboard and gesture.</li>
-  <li>More complex examples beyond a simple redirect.</li>
-  <li>How to track the Konami Code using Google Analytics.</li>
+  <li>How to present different easter eggs for gesture versus keyboard input</li>
+  <li>How to override the default code for both keyboard and gesture</li>
+  <li>More complex examples beyond a simple redirect</li>
+  <li>How to track the Konami Code using Google Analytics</li>
   <li>Other examples!</li>
 </ul>
+
+<h3>Future Improvements</h3>
+
+<p>
+  Konami-JS is an ancient project by JavaScript standards, having started in 2009! I would love for 2018 to be the year it gets rewritten in a more modern, ES6-friendly way while incorporating something like <a href="https://babeljs.io">Babel</a> to ensure backwards compatibility in older browsers.
+</p>
+<p>
+  I would love the community's help in any of this 😃
+</p>
+
+<p>Lastly, you can watch <a href="https://george.mand.is" title="George Mandis">me</a> talk about the history of Konami-JS and the value of maintaining "frivolous" open-source projects here at OdessaJS 2017:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F3xI3ps7syI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 <h3>
 <a name="as-seen-on" class="anchor" href="#as-seen-on"><span class="octicon octicon-link"></span></a>As Seen On...</h3>
@@ -97,12 +112,12 @@
     <hr />
       <p class='text-center'>
 
-        A silly web-toy lovingly cobbled together in 2009 by <a href='http://george.mand.is'>George Mandis</a> of <a href='https://snaptortoise.com?konami'>Snaptortoise</a>.  <br />
+        A silly web-toy lovingly cobbled together in 2009 by <a href='https://george.mand.is'>George Mandis</a> of <a href='https://snaptortoise.com?konami'>Snaptortoise</a>.  <br />
         <a href='mailto:info+konami@snaptortoise.com'>Available</a> for consulting, development and teaching.
       </p>
       <p class='text-center'><i class='fa fa-heart'></i></p>
       <p class='text-center'>
-        <strong>Konami-JS 1.4.5</strong>. Licensed under the <a href='(http://opensource.org/licenses/MIT'>MIT License</a>. <br /> Thanks to <a href='http://getbootstrap.com/'>Bootstrap</a>, <a href='http://fontawesome.io/'>Font Awesome </a>and <a href='http://subtlepatterns.com'>Subtle Patterns</a> for the resources to build-out this page. <br />
+        <strong>Konami-JS 1.6.0</strong>. Licensed under the <a href='http://opensource.org/licenses/MIT'>MIT License</a>. <br /> Thanks to <a href='http://getbootstrap.com/'>Bootstrap</a>, <a href='http://fontawesome.io/'>Font Awesome </a>and <a href='http://subtlepatterns.com'>Subtle Patterns</a> for the resources to build-out this page. <br />
       </p>
     
   </div>
