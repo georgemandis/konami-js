@@ -2,7 +2,15 @@
 
 Add the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) as an easter egg to your web project. Compatible with keyboards and touch events.
 
-For example and additional information please visit: [http://snaptortoise.github.io/konami-js/](http://snaptortoise.github.io/konami-js/)
+For example and additional information please visit: [http://snaptortoise.github.io/konami-js/]
+(http://snaptortoise.github.io/konami-js/)
+
+To install you can:
+
+- [Download the latest source](https://github.com/snaptortoise/konami-js/archive/master.zip) and include konami.js in your project
+- Install with npm: `npm install konami`
+- Install with bower: `bower install konami-js`
+
 
 Notable instances of Konami-JS in the wild include:
 
