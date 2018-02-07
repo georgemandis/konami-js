@@ -2,8 +2,7 @@
 
 Add the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) as an easter egg to your web project. Compatible with keyboards and touch events.
 
-For example and additional information please visit: [http://snaptortoise.github.io/konami-js/]
-(http://snaptortoise.github.io/konami-js/)
+For example and additional information please visit: https://snaptortoise.github.io/konami-js/
 
 ## Install
 
