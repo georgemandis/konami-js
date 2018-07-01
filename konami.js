@@ -33,7 +33,6 @@ var Konami = function (callback) {
         input: "",
         pattern: "38384040373937396665",
         keydownHandler: function (e, ref_obj) {
-            console.log(this)
             if (ref_obj) {
                 konami = ref_obj;
             } // IE

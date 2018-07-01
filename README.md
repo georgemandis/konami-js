@@ -39,4 +39,4 @@ If you are looking for GamePad support check out this fork:
 
 ## Contributions
 
-Your pull requests are welcome! Emphasis on small footprints, speed and broad device/browser compatability. Less interested in package manger and toolchain integrations. 
+Your pull requests are welcome! Emphasis on small footprints, speed and broad device/browser compatability. Less interested in package manager and toolchain integrations. 
