@@ -8,7 +8,6 @@ For example and additional information please visit: https://snaptortoise.github
 
 - [Download the latest source](https://github.com/snaptortoise/konami-js/archive/master.zip) and include konami.js in your project
 - Install with [npm](https://www.npmjs.com): `npm install konami`
-- Install with [bower](https://bower.io): `bower install konami-js`
 
 ## Future Improvements
 
