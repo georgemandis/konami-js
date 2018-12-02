@@ -1,140 +1,134 @@
 /*
  * Konami-JS ~
- * :: Now with support for touch events and multiple instances for
- * :: those situations that call for multiple easter eggs!
  * Code: https://github.com/snaptortoise/konami-js
- * Copyright (c) 2009 George Mandis (georgemandis.com, snaptortoise.com)
- * Version: 1.6.2 (7/17/2018)
+ * Documentation: https://snaptortoise.github.io/konami-js/
+ * Copyright (c) 2009-2018 George Mandis (george.mand.is, snaptortoise.com)
+ * Version: 2.0,0 (12/1/2018)
  * Licensed under the MIT License (http://opensource.org/licenses/MIT)
- * Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1+ and Android
  */
+class Konami {
+  constructor(initProperties) {
+    const defaultProperties = {
+      keyboard: {
+        sequence: ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'],
+        input: [],
+        event: '',
+      },
+      gesture: {
+        sequence: ['UP', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT', 'LEFT', 'RIGHT', 'TAP', 'TAP'],
+        input: [],
+        event: '',
+      },
+      gamepad: {
+        sequence: ['12', '12', '13', '13', '14', '15', '14', '15', '0', '1'],
+        input: [],
+        event: '',
+      },
+    };
 
-const Konami = (callback) => {
-  const konami = {
-    addEvent(obj, type, fn, ref_obj) {
-      if (obj.addEventListener) obj.addEventListener(type, fn, false);
-      else if (obj.attachEvent) {
-        // IE
-        obj[`e${type}${fn}`] = fn;
-        obj[type + fn] = function () {
-          obj[`e${type}${fn}`](window.event, ref_obj);
-        };
-        obj.attachEvent(`on${type}`, obj[type + fn]);
-      }
-    },
-    removeEvent(obj, eventName, eventCallback) {
-      if (obj.removeEventListener) {
-        obj.removeEventListener(eventName, eventCallback);
-      } else if (obj.attachEvent) {
-        obj.detachEvent(eventName);
-      }
-    },
-    input: '',
-    pattern: '38384040373937396665',
-    keydownHandler(e, ref_obj) {
-      if (ref_obj) {
-        konami = ref_obj;
-      } // IE
-      konami.input += e ? e.keyCode : event.keyCode;
-      if (konami.input.length > konami.pattern.length) {
-        konami.input = konami.input.substr(konami.input.length - konami.pattern.length);
-      }
-      if (konami.input === konami.pattern) {
-        konami.code(konami._currentLink);
-        konami.input = '';
-        e.preventDefault();
-        return false;
-      }
-    },
-    load(link) {
-      this._currentLink = link;
-      this.addEvent(document, 'keydown', this.keydownHandler, this);
-      this.iphone.load(link);
-    },
-    unload() {
-      this.removeEvent(document, 'keydown', this.keydownHandler);
-      this.iphone.unload();
-    },
-    code(link) {
-      window.location = link;
-    },
-    iphone: {
-      start_x: 0,
-      start_y: 0,
-      stop_x: 0,
-      stop_y: 0,
-      tap: false,
-      capture: false,
-      orig_keys: '',
-      keys: ['UP', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT', 'LEFT', 'RIGHT', 'TAP', 'TAP'],
-      input: [],
-      code(link) {
-        konami.code(link);
-      },
-      touchmoveHandler(e) {
-        if (e.touches.length === 1 && konami.iphone.capture === true) {
-          const touch = e.touches[0];
-          konami.iphone.stop_x = touch.pageX;
-          konami.iphone.stop_y = touch.pageY;
-          konami.iphone.tap = false;
-          konami.iphone.capture = false;
-          konami.iphone.check_direction();
-        }
-      },
-      touchendHandler() {
-        konami.iphone.input.push(konami.iphone.check_direction());
+    if (typeof initProperties === 'string') {
+      Object.keys(defaultProperties).forEach((type) => {
+        defaultProperties[type].event = () => { window.location = initProperties; };
+      });
+    }
 
-        if (konami.iphone.input.length > konami.iphone.keys.length) konami.iphone.input.shift();
+    if (typeof initProperties === 'function') {
+      Object.keys(defaultProperties).forEach((type) => {
+        defaultProperties[type].event = initProperties;
+      });
+    }
 
-        if (konami.iphone.input.length === konami.iphone.keys.length) {
-          let match = true;
-          for (let i = 0; i < konami.iphone.keys.length; i++) {
-            if (konami.iphone.input[i] !== konami.iphone.keys[i]) {
-              match = false;
-            }
-          }
-          if (match) {
-            konami.iphone.code(konami._currentLink);
-          }
-        }
-      },
-      touchstartHandler(e) {
-        konami.iphone.start_x = e.changedTouches[0].pageX;
-        konami.iphone.start_y = e.changedTouches[0].pageY;
-        konami.iphone.tap = true;
-        konami.iphone.capture = true;
-      },
-      load(link) {
-        this.orig_keys = this.keys;
-        konami.addEvent(document, 'touchmove', this.touchmoveHandler);
-        konami.addEvent(document, 'touchend', this.touchendHandler, false);
-        konami.addEvent(document, 'touchstart', this.touchstartHandler);
-      },
-      unload() {
-        konami.removeEvent(document, 'touchmove', this.touchmoveHandler);
-        konami.removeEvent(document, 'touchend', this.touchendHandler);
-        konami.removeEvent(document, 'touchstart', this.touchstartHandler);
-      },
-      check_direction() {
-        const xMagnitude = Math.abs(this.start_x - this.stop_x);
-        const yMagnitude = Math.abs(this.start_y - this.stop_y);
-        const x = this.start_x - this.stop_x < 0 ? 'RIGHT' : 'LEFT';
-        const y = this.start_y - this.stop_y < 0 ? 'DOWN' : 'UP';
-        let result = xMagnitude > yMagnitude ? x : y;
-        result = this.tap === true ? 'TAP' : result;
-        return result;
-      },
-    },
-  };
+    if (typeof initProperties === 'object') {
+      Object.keys(initProperties).forEach((key) => {
+        Object.assign(defaultProperties[key], initProperties[key]);
+      });
+    }       
 
-  typeof callback === 'string' && konami.load(callback);
-  if (typeof callback === 'function') {
-    konami.code = callback;
-    konami.load();
+    Object.assign(this, defaultProperties);
+
+    document.addEventListener('keydown', (e) => {
+      this.keydownHandler(e);
+    });
+
+    document.addEventListener('touchmove', (e) => {
+      this.touchmoveHandler(e);
+    });
+
+    document.addEventListener('touchstart', (e) => {
+      this.touchstartHandler(e);
+    });
+
+    document.addEventListener('touchend', (e) => {
+      this.touchendHandler(e);
+    });
   }
 
-  return konami;
-};
+  /**
+   * Keyboard handler event   
+   */
+  keydownHandler(e) {
+    this.keyboard.input.push(e.code);
+
+    if (this.keyboard.input.length > this.keyboard.sequence.length) this.keyboard.input.shift();
+
+    if (this.keyboard.input.toString() === this.keyboard.sequence.toString()) {
+      this.keyboard.input.splice(0, this.keyboard.input.length);
+      this.keyboard.event();
+    }
+  }  
+
+  /**
+   * Touch handler events   
+   */
+  touchstartHandler(e) {
+    this.gesture.startX = e.changedTouches[0].pageX;
+    this.gesture.startY = e.changedTouches[0].pageY;
+    this.gesture.tap = true;
+    this.gesture.capture = true;
+  }
+
+  touchendHandler(e) {
+    const touch = e.changedTouches[0];
+    this.gesture.stopX = touch.pageX;
+    this.gesture.stopY = touch.pageY;
+    this.gesture.input.push(this.checkTouchDirection());
+
+    if (this.gesture.input.length > this.gesture.sequence.length) this.gesture.input.shift();
+
+    if (this.gesture.input.toString() === this.gesture.sequence.toString()) {
+      this.gesture.input.splice(0, this.gesture.input.length);
+      this.gesture.event();
+    }
+  }
+
+  touchmoveHandler(e) {
+    if (e.touches.length === 1 && this.gesture.capture === true) {
+      const touch = e.touches[0];
+      this.gesture.stopX = touch.pageX;
+      this.gesture.stopY = touch.pageY;
+      this.gesture.tap = false;
+      this.gesture.capture = false;
+    }
+  }
+
+  checkTouchDirection() {
+    const xMagnitude = Math.abs(this.gesture.startX - this.gesture.stopX);
+    const yMagnitude = Math.abs(this.gesture.startY - this.gesture.stopY);
+    const x = this.gesture.startX - this.gesture.stopX < 0 ? 'RIGHT' : 'LEFT';
+    const y = this.gesture.startY - this.gesture.stopY < 0 ? 'DOWN' : 'UP';
+    let result = xMagnitude > yMagnitude ? x : y;
+    result = this.gesture.tap === true ? 'TAP' : result;
+    return result;
+  }
+  
+  /**
+   *  Gamepad handler events
+   */
+
+   gamepadHandler() {
+     
+   }
+}
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   module.exports = Konami;
