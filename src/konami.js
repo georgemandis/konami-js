@@ -66,8 +66,14 @@ class Konami {
   /**
    * Keyboard handler event
    */
-  keydownHandler(e) {
-    this.keyboard.input.push(e.code);
+  keydownHandler(e) {    
+    // iOS workaround      
+    if (e.code === 'Unidentified' && e.key.includes("Arrow")) {
+      let key = "Arrow" + e.key.slice(10, e.key.indexOf("Arrow"));
+      this.keyboard.input.push(key);
+    }else{
+      this.keyboard.input.push(e.code);
+    }
 
     if (this.keyboard.input.length > this.keyboard.sequence.length) this.keyboard.input.shift();
 
