@@ -42,7 +42,7 @@ class Konami {
       Object.keys(initProperties).forEach((key) => {
         Object.assign(defaultProperties[key], initProperties[key]);
       });
-    }       
+    }
 
     Object.assign(this, defaultProperties);
 
@@ -64,7 +64,7 @@ class Konami {
   }
 
   /**
-   * Keyboard handler event   
+   * Keyboard handler event
    */
   keydownHandler(e) {
     this.keyboard.input.push(e.code);
@@ -75,10 +75,10 @@ class Konami {
       this.keyboard.input.splice(0, this.keyboard.input.length);
       this.keyboard.event();
     }
-  }  
+  }
 
   /**
-   * Touch handler events   
+   * Touch handler events
    */
   touchstartHandler(e) {
     this.gesture.startX = e.changedTouches[0].pageX;
@@ -120,14 +120,14 @@ class Konami {
     result = this.gesture.tap === true ? 'TAP' : result;
     return result;
   }
-  
+
   /**
    *  Gamepad handler events
    */
 
-   gamepadHandler() {
-     
-   }
+  gamepadHandler() {
+
+  }
 }
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
