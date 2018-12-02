@@ -5,7 +5,7 @@
     "George Mandis <george@snaptortoise.com>"
   ],
   "description": "An easter-egg script for adding the Konami Code to your website or project.",
-  "main": "konami.js",
+  "main": "src/konami.js",
   "keywords": [
     "konami",
     "easter-egg"
