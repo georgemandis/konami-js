@@ -10,7 +10,7 @@ class Konami {
   constructor(initProperties) {
     const defaultProperties = {
       keyboard: {
-        sequence: ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'],
+        sequence: ['ARROWUP', 'ARROWUP', 'ARROWDOWN', 'ARROWDOWN', 'ARROWLEFT', 'ARROWRIGHT', 'ARROWLEFT', 'ARROWRIGHT', 'B', 'A'],
         input: [],
         event: '',
       },
@@ -66,14 +66,9 @@ class Konami {
   /**
    * Keyboard handler event
    */
-  keydownHandler(e) {    
-    // iOS workaround      
-    if (e.code === 'Unidentified' && e.key.includes("Arrow")) {
-      let key = "Arrow" + e.key.slice(10, e.key.indexOf("Arrow"));
-      this.keyboard.input.push(key);
-    }else{
-      this.keyboard.input.push(e.code);
-    }
+  keydownHandler(e) {
+    // Capitalize key event so it fires even if Shift or Caps Lock are used.
+    this.keyboard.input.push(e.key.toUpperCase());
 
     if (this.keyboard.input.length > this.keyboard.sequence.length) this.keyboard.input.shift();
 
