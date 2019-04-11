@@ -21,8 +21,10 @@ You can watch [me](https://george.mand.is) talk about the history of Konami-JS a
 
 Notable instances of Konami-JS in the wild include:
 
+  * [HuffPost](https://twitter.com/georgeMandis/status/1116083414141038592)
+  * [Tesla](https://teslamotorsclub.com/tmc/threads/easter-egg-in-the-design-studio-konami-code.7944/) ([Archive.org](https://web.archive.org/web/20130408184419js_/http://www.teslamotors.com/sites/all/themes/tesla/configurator/js/libs/konami.1.3.3.pack.js?c))
   * [Newsweek](http://www.forbes.com/sites/firewall/2010/06/15/newsweek-reports-the-zombie-invasion/)
-  * [Marvel](https://en.wikipedia.org/wiki/File:Marvel_konami_code.jpg)
+  * [Marvel](https://en.wikipedia.org/wiki/File:Marvel_konami_code.jpg) ([Archive.org](http://web.archive.org/web/20100131153849/http://marvel.com/))
   * [Almost half the sites in this Mashable article](http://mashable.com/2010/07/31/konami-code-sites)
   * [Smashing Magazine](http://uxdesign.smashingmagazine.com/2012/04/26/gamification-ux-users-win-lose/)
   * [The History of Gaming Conventions](http://www.bigfishgames.com/daily/gaming-conventions-timeline/)
