@@ -4,6 +4,8 @@ Add the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) as an easter eg
 
 For examples and additional information please visit: https://snaptortoise.github.io/konami-js/
 
+A joyful, frivolous project by [George Mandis](https://george.mand.is)
+
 ## Install
 
 - [Download the latest source](https://github.com/snaptortoise/konami-js/archive/master.zip) and include `konami.js` in your project
@@ -16,9 +18,8 @@ Konami-JS is an ancient project by JavaScript standards, having started in 2009!
 
 I welcome the community's help in any of this 😃
 
-You can watch [me](https://george.mand.is) talk about the history of Konami-JS and the joy & value of maintaining "frivolous" open-source projects at OdessaJS here: [https://www.youtube.com/embed/F3xI3ps7syI](https://www.youtube.com/embed/F3xI3ps7syI)</p>
 
-
+## Konami-JS in Action
 Notable instances of Konami-JS in the wild include:
 
   * [HuffPost](https://twitter.com/georgeMandis/status/1116083414141038592)
@@ -30,6 +31,11 @@ Notable instances of Konami-JS in the wild include:
   * [The History of Gaming Conventions](http://www.bigfishgames.com/daily/gaming-conventions-timeline/)
   * ...and MANY more!
 
+## Watch & Listen
+Watch me talk about the history of Konami-JS and the joy & value of maintaining "frivolous" open-source projects at OdessaJS here: [https://www.youtube.com/embed/F3xI3ps7syI](https://www.youtube.com/embed/F3xI3ps7syI)
+
+Listen to me talk about Konami-JS on the [JS Party](https://changelog.com/jsparty) podcast here: [https://changelog.com/jsparty/81](https://changelog.com/jsparty/81)
+
 ## Forks
 If you'd prefer to use a coffeescript version you can find one here:  
 [https://github.com/camray/konami-coffee](https://github.com/camray/konami-coffee)
@@ -38,5 +44,4 @@ If you are looking for GamePad support check out this fork:
 [https://github.com/TomBebbington/konami-js](https://github.com/TomBebbington/konami-js)
 
 ## Contributions
-
 Your pull requests are welcome! Emphasis on small footprints, speed and broad device/browser compatability. Less interested in package manager and toolchain integrations—though that may change with the `2.0` branch.
