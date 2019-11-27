@@ -22,6 +22,7 @@ I welcome the community's help in any of this 😃
 ## Konami-JS in Action
 Notable instances of Konami-JS in the wild include:
 
+  * [Backpack](https://backpack.github.io/components/button/?platform=web) (Skyscanner's design system documentation)
   * [HuffPost](https://twitter.com/georgeMandis/status/1116083414141038592)
   * [Tesla](https://teslamotorsclub.com/tmc/threads/easter-egg-in-the-design-studio-konami-code.7944/) ([Archive.org](https://web.archive.org/web/20130408184419js_/http://www.teslamotors.com/sites/all/themes/tesla/configurator/js/libs/konami.1.3.3.pack.js?c))
   * [Newsweek](http://www.forbes.com/sites/firewall/2010/06/15/newsweek-reports-the-zombie-invasion/)
