@@ -8,7 +8,7 @@
 
   <title>Konami-JS: The original easter-egg script</title>
   <meta name="description" content="">
-  <link rel="canonical" href="/konami-js//">
+  <link rel="canonical" href="http://localhost:4000/konami-js//">
   <!-- Latest compiled and minified CSS -->
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,700,900|Source+Sans+Pro:300,300i,400,700,700i" rel="stylesheet">  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -38,14 +38,14 @@
 
     <div class='container'>
       <div class='primary-content'>
-        <h3>About This Project</h3>
+        <h2>About This Project</h2>
 <p>Every site should have an implementation of the Konami Code. It makes things more fun! If you're unfamiliar with it, the Konami Code is a "cheat code" that appeared in many of Konami's video games going all the way back to 1986.  It was typically entered on a Nintendo controller. Now it's often used on websites to show silly things to visitors when the code is "unlocked."</p>
 
 <p>Konami-JS includes support for gestures on smartphones and tablets.  Technically the code becomes "up, up, down, down, left, right, left, right, tap, tap," on these devices but... that's close enough!</p>
 
 <p>Support for touch gestures is automatically loaded when <code>konami.load()</code> is called.</p>
 
-<h3>Installing</h3>
+<h2>Installing</h2>
 
 <p>You can install Konami-JS several ways with <a href="http://npmjs.com">npm</a>:</p>
 
@@ -57,7 +57,7 @@
 
 <p>Or you can <a href='https://github.com/snaptortoise/konami-js/archive/master.zip'>download the files</a> from GitHub and stick <code>konami.js</code> in your project.</p>
 
-<h3>Getting Started</h3>
+<h2>Getting Started</h2>
 <p>The simplest version of a Konami-JS implementation looks like this:</p>
 
 <pre><code>var easter_egg = new Konami('http://your-special-easter-egg-website.com');
@@ -71,53 +71,53 @@
 
 <p>This will call the function when the code is successfully entered.</p>
 
-<h3>Coming Soon</h3>
-<ul>
-  <li>How to present different easter eggs for gesture versus keyboard input</li>
-  <li>How to override the default code for both keyboard and gesture</li>
-  <li>More complex examples beyond a simple redirect</li>
-  <li>How to track the Konami Code using Google Analytics</li>
-  <li>Other examples!</li>
-</ul>
-
-<h3>Future Improvements</h3>
+<h2>Project History</h2>
 
 <p>
-  Konami-JS is an ancient project by JavaScript standards, having started in 2009! I would love for 2018 to be the year it gets rewritten in a more modern, ES6-friendly way while incorporating something like <a href="https://babeljs.io">Babel</a> to ensure backwards compatibility in older browsers.
+  Konami-JS is an ancient project by JavaScript standards, having started in 2009. It was created by <a href='https://george.mand.is'>George Mandis</a>.
 </p>
+
+<p>Watch George talk about the history of Konami-JS and the value of maintaining "frivolous" open-source projects here at OdessaJS 2017:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F3xI3ps7syI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen style='max-width:100%'></iframe>
+
 <p>
-  I would love the community's help in any of this 😃
+  Listen to George talk about the general history of Konami-JS:
 </p>
 
-<p>Lastly, you can watch <a href="https://george.mand.is" title="George Mandis">me</a> talk about the history of Konami-JS and the value of maintaining "frivolous" open-source projects here at OdessaJS 2017:</p>
+<audio data-theme="night" data-src="https://changelog.com/jsparty/81/embed" src="https://cdn.changelog.com/uploads/jsparty/81/js-party-81.mp3" preload="none" class="changelog-episode" controls></audio><p><a href="https://changelog.com/jsparty/81">JS Party 81: The story of Konami-JS</a> – Listen on <a href="https://changelog.com/">Changelog.com</a></p><script async src="//cdn.changelog.com/embed.js"></script>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F3xI3ps7syI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-<h3>
-<a name="as-seen-on" class="anchor" href="#as-seen-on"><span class="octicon octicon-link"></span></a>As Seen On...</h3>
+<h2>
+<a name="as-seen-on" class="anchor" href="#as-seen-on"><span class="octicon octicon-link"></span></a>As Seen On...</h2>
 
 <ul>
-<li><a href='http://www.forbes.com/sites/firewall/2010/06/15/newsweek-reports-the-zombie-invasion/#4f8d0c82319c'>Newsweek Zombies</a></li>
-<li>Marvel</li>
-<li><a href="http://mashable.com/2010/07/31/konami-code-sites">Almost half the sites in this Mashable article</a></li>
-<li><a href="http://uxdesign.smashingmagazine.com/2012/04/26/gamification-ux-users-win-lose/">Smashing Magazine</a></li>
-<li>...and MANY more!</li>
+  <li><a href="https://backpack.github.io/components/button/?platform=web" rel="nofollow">Backpack</a> (Skyscanner's design system documentation)</li>
+  <li><a href="https://twitter.com/georgeMandis/status/1116083414141038592" rel="nofollow">HuffPost</a></li>
+  <li><a href="https://teslamotorsclub.com/tmc/threads/easter-egg-in-the-design-studio-konami-code.7944/" rel="nofollow">Tesla</a> (<a href="https://web.archive.org/web/20130408184419js_/http://www.teslamotors.com/sites/all/themes/tesla/configurator/js/libs/konami.1.3.3.pack.js?c" rel="nofollow">Archive.org</a>)</li>
+  <li><a href="http://www.forbes.com/sites/firewall/2010/06/15/newsweek-reports-the-zombie-invasion/" rel="nofollow">Newsweek</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/File:Marvel_konami_code.jpg" rel="nofollow">Marvel</a> (<a href="http://web.archive.org/web/20100131153849/http://marvel.com/" rel="nofollow">Archive.org</a>)</li>
+  <li><a href="http://mashable.com/2010/07/31/konami-code-sites" rel="nofollow">Almost half the sites in this Mashable article</a></li>
+  <li><a href="http://uxdesign.smashingmagazine.com/2012/04/26/gamification-ux-users-win-lose/" rel="nofollow">Smashing Magazine</a></li>
+  <li><a href="http://www.bigfishgames.com/daily/gaming-conventions-timeline/" rel="nofollow">The History of Gaming Conventions</a></li>
+  <li>...and MANY more!</li>
 </ul>
-
       </div>
     </div>
 
     <footer class="site-footer">
   <div class='container'>
     <hr />
-      <p class='text-center'>
-
-        A silly web-toy lovingly cobbled together in 2009 by <a href='https://george.mand.is'>George Mandis</a> of <a href='https://snaptortoise.com?konami'>Snaptortoise</a>.  <br />
-        <a href='mailto:info+konami@snaptortoise.com'>Available</a> for consulting, development and teaching.
+      <p>
+        A silly web-toy lovingly cobbled together in 2009 by <a href='https://george.mand.is'>George Mandis</a> of <a href='https://snaptortoise.com?konami'>SnapTortoise</a>.
       </p>
-      <p class='text-center'><i class='fa fa-heart'></i></p>
-      <p class='text-center'>
-        <strong>Konami-JS 1.6.0</strong>. Licensed under the <a href='http://opensource.org/licenses/MIT'>MIT License</a>. <br /> Thanks to <a href='http://getbootstrap.com/'>Bootstrap</a>, <a href='http://fontawesome.io/'>Font Awesome </a>and <a href='http://subtlepatterns.com'>Subtle Patterns</a> for the resources to build-out this page. <br />
+      <p>
+        <div class="rc-scout"></div><script async defer="defer" src="https://www.recurse-scout.com/loader.js?t=151b3c977197fc57d3ab8ce968bce35e"></script>
+      </p>
+      <p>
+        <i class='fa fa-heart'></i> <strong>Konami-JS 1.6.2</strong>. Licensed under the <a href='http://opensource.org/licenses/MIT'>MIT License</a>. 
+      </p>
+      <p>
+        Thanks to <a href='http://getbootstrap.com/'>Bootstrap</a>, <a href='http://fontawesome.io/'>Font Awesome </a>and <a href='http://subtlepatterns.com'>Subtle Patterns</a> for the resources to build-out this page.
       </p>
     
   </div>
@@ -129,15 +129,16 @@
     <script src='easteregg.js'></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44252170-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    ga('create', 'UA-44252170-1', 'snaptortoise.com');
-    ga('send', 'pageview');
+      gtag('config', 'UA-44252170-1');
     </script>
+
     
   </body>
 

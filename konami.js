@@ -4,7 +4,7 @@
  * :: those situations that call for multiple easter eggs!
  * Code: https://github.com/snaptortoise/konami-js
  * Copyright (c) 2009 George Mandis (georgemandis.com, snaptortoise.com)
- * Version: 1.6.1 (6/25/2018)
+ * Version: 1.6.2 (7/17/2018)
  * Licensed under the MIT License (http://opensource.org/licenses/MIT)
  * Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1+ and Android
  */
@@ -33,7 +33,6 @@ var Konami = function (callback) {
         input: "",
         pattern: "38384040373937396665",
         keydownHandler: function (e, ref_obj) {
-            console.log(this)
             if (ref_obj) {
                 konami = ref_obj;
             } // IE

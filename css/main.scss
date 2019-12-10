@@ -68,6 +68,15 @@ code,pre {
 .primary-content {
   font-size:1.5em;
   padding:1em 0;
+  line-height:1.5em;
+}
+
+.primary-content h1,h2,h3 {
+  margin-top:1.5em;
+}
+
+p {
+  max-width:42em;
 }
 
 @keyframes bgscroll-vertical {

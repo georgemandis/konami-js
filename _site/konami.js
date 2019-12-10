@@ -4,7 +4,7 @@
  * :: those situations that call for multiple easter eggs!
  * Code: https://github.com/snaptortoise/konami-js
  * Copyright (c) 2009 George Mandis (georgemandis.com, snaptortoise.com)
- * Version: 1.6.0 (1/3/2018)
+ * Version: 1.6.2 (7/17/2018)
  * Licensed under the MIT License (http://opensource.org/licenses/MIT)
  * Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1+ and Android
  */
@@ -41,13 +41,14 @@ var Konami = function (callback) {
                 konami.input = konami.input.substr((konami.input.length - konami.pattern.length));
             }
             if (konami.input === konami.pattern) {
-                konami.code(this._currentLink);
+                konami.code(konami._currentLink);
                 konami.input = '';
                 e.preventDefault();
                 return false;
             }
         },
         load: function (link) {
+            this._currentLink = link;
             this.addEvent(document, "keydown", this.keydownHandler, this);
             this.iphone.load(link);
         },
@@ -94,7 +95,7 @@ var Konami = function (callback) {
                         }
                     }
                     if (match) {
-                        konami.iphone.code(this._currentLink);
+                        konami.iphone.code(konami._currentLink);
                     }
                 }
             },
