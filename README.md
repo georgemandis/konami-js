@@ -1,5 +1,9 @@
 # Konami-JS
 
+[![Version](https://img.shields.io/npm/v/konami.svg)](https://npmjs.org/package/konami)
+[![Downloads/week](https://img.shields.io/npm/dw/konami.svg)](https://npmjs.org/package/konami)
+[![License](https://img.shields.io/npm/l/konami.svg)](https://github.com/snaptortoise/konami-js/blob/master/package.json)
+
 Add the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) as an easter egg to your web project. Compatible with keyboard and touch events.
 
 For examples and additional information please visit: https://snaptortoise.github.io/konami-js/
