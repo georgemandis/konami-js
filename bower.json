@@ -1,8 +1,8 @@
 {
   "name": "konami-js",
-  "homepage": "https://github.com/snaptortoise/konami-js",
+  "homepage": "https://github.com/georgemandis/konami-js",
   "authors": [
-    "George Mandis <george@snaptortoise.com>"
+    "George Mandis <george@mand.is>"
   ],
   "description": "An easter-egg script for adding the Konami Code to your website or project.",
   "main": "konami.js",
