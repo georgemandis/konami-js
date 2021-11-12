@@ -1,8 +1,0 @@
-# Site settings
-title: Konami-JS
-email: george@mand.is
-description: > # The original JavaScript easter-egg script.
-baseurl: "/konami-js/" # the subpath of your site, e.g. /blog/
-
-# Build settings
-markdown: kramdown
