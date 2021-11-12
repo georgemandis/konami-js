@@ -30,7 +30,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/georgemandis/konami-js/edit/gh-pages/',          
+          editUrl: 'https://github.com/georgemandis/konami-js/edit/documentation/',
         },        
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
