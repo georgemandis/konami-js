@@ -15,6 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'georgemandis', // Usually your GitHub org/user name.
   projectName: 'konami-js', // Usually your repo name.
+  deploymentBranch: "docs",
   scripts: [
     {src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'konamijs.mand.is'},
     {src: 'https://cdn.changelog.com/embed.js', async: true},
