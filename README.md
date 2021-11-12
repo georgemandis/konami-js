@@ -8,12 +8,15 @@ Making the web more fun since 2009.
 
 Add the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) as an easter egg to your project! Compatible with keyboard and touch events.
 
-For examples and additional information please visit the documentation site:
-
-[konamijs.mand.is](http://konamijs.mand.is/)
-
 A joyful, frivolous project by [George Mandis](https://george.mand.is)
+
+## Documentation
+
+A brand-new documentation site now lives at [konamijs.mand.is](http://konamijs.mand.is/). Please check it out, in particular the showcase:
+
+[https://konamijs.mand.is/docs/showcase](https://konamijs.mand.is/docs/showcase)
+
 
 ## Contributions
 
-Your pull requests are welcome!
+Your pull requests are welcome! Especially updates for the documentation. You'll find the source for it in the [documentation branch](https://github.com/georgemandis/konami-js/tree/documentation).
