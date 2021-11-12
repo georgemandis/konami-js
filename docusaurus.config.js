@@ -12,6 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  trailingSlash: true,
   // favicon: 'img/favicon.ico',
   organizationName: 'georgemandis', // Usually your GitHub org/user name.
   projectName: 'konami-js', // Usually your repo name.
