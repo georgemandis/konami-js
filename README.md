@@ -1,4 +1,4 @@
-# Konami-JS
+# Konami JS
 
 Making the web more fun since 2009.
 
