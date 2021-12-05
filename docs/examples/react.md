@@ -13,7 +13,7 @@ The import part is pretty straight-forward and should appear at the top of your 
 import Konami from "konami";
 ```
 
-The last step is initializing Konami JS when the component mounts. In most hook-based React apps this will require using `userEffect` and look something like this:
+The last step is initializing Konami JS when the component mounts. In most hook-based React apps this will require using `useEffect` and look something like this:
 
 ```javascript
   useEffect(()=>{
