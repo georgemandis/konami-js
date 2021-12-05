@@ -48,6 +48,9 @@ If you want to be super old-school about it you can simply [download the files](
 <body>
   
 <script src="/konami.js"></script>
+<script>
+  const easterEgg = new Konami("https://konamijs.mand.is/")
+</script>
 </body>
 </html>
 ```
