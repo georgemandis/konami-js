@@ -143,6 +143,11 @@ const config = {
                 label: "Become a better programmer",
                 title: "Recurse Center",
                 href: "https://www.recurse.com/scout/click?t=151b3c977197fc57d3ab8ce968bce35e"
+              },
+              {
+                label: "/dev/random/",
+                title: "Subscribe to my newsletter",
+                href: "https://georgemandis.substack.com/subscribe"
               }
             ],
           },
