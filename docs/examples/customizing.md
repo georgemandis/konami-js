@@ -15,7 +15,7 @@ You can customize the input sequences and response for more intersting easter eg
 If you'd like to change the input sequence to something _other_ than the Konami Code you can specifiy this during initialization:
 
 ```javascript
-const easterEgg = new Konami("http://konamijs.mand.is/").
+const easterEgg = new Konami("http://konamijs.mand.is/")
 // Changes the keyboard pattern to the "ArrowUp" key 10 times
 easterEgg.pattern = "38383838383838383838"
 // Change the touch input pattern to a clockwise sequence: up, right, down, left
