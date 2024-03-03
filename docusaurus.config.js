@@ -66,12 +66,12 @@ const config = {
             position: 'left',
             label: 'Examples',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'Docs',
-          // },
+          {
+            type: 'doc',
+            docId: 'documentation',
+            position: 'left',
+            label: 'Docs',
+          },
           {
             type: 'doc',
             docId: 'showcase',
@@ -111,11 +111,11 @@ const config = {
             title: 'Watch & Listen',
             items: [
               {
-                label: 'Talk at OdessaJS',
+                label: '🇺🇦💛💙 Talk at OdessaJS (2017)',
                 href: 'https://www.youtube.com/watch?v=F3xI3ps7syI',
               },
               {
-                label: 'Interview on JS Party',
+                label: '🎉 Interview on JS Party',
                 href: 'https://changelog.com/jsparty/81',
               },
               // {
