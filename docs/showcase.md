@@ -9,6 +9,11 @@ Konami-JS has been used far and wide for over a decade. Here are some stand-out 
 
 ## Hall of Fame
   
+<a href="https://github.com/honestbleeps/Reddit-Enhancement-Suite/">Reddit Enhancement Suite</a>
+
+A community-driven, unofficial browser extension for the Reddit community.
+
+
 <a href="https://twitter.com/georgeMandis/status/1116083414141038592" rel="nofollow">HuffPost</a>
 
 HuffPost used Konami JS to swap all of the current photos on the page out with photos of people's pets. Seems to be gone as of last viewing, which is too bad. Definitely improved the UX.
