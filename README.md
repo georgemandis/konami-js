@@ -8,7 +8,7 @@ Making the web more fun since 2009.
 [![GitHub stars](https://img.shields.io/github/stars/georgemandis/konami-js)](https://github.com/georgemandis/konami-js/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/georgemandis/konami-js?color=blue)](https://github.com/georgemandis/konami-js/network)
 [![GitHub contributors](https://img.shields.io/github/contributors/georgemandis/konami-js?color=blue)](https://github.com/georgemandis/konami-js/network)
-
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 Add the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) as an easter egg to your project! Compatible with keyboard and touch events.
 
