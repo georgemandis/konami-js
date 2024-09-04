@@ -4,7 +4,7 @@
  * :: those situations that call for multiple easter eggs!
  * Code: https://github.com/georgemandis/konami-js
  * Copyright (c) 2009 George Mandis (https://george.mand.is)
- * Version: 1.6.3 (11/11/2021)
+ * Version: 1.7.0 (09/03/2024)
  * Licensed under the MIT License (http://opensource.org/licenses/MIT)
  * Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1+ and Android
  */
@@ -91,7 +91,6 @@ var Konami = function (callback) {
           konami.iphone.stop_y = touch.pageY;
           konami.iphone.tap = false;
           konami.iphone.capture = false;
-          konami.iphone.check_direction();
         }
       },
       touchendHandler: function () {
@@ -130,12 +129,14 @@ var Konami = function (callback) {
         konami.removeEvent(document, "touchstart", this.touchstartHandler);
       },
       check_direction: function () {
-        x_magnitude = Math.abs(this.start_x - this.stop_x);
-        y_magnitude = Math.abs(this.start_y - this.stop_y);
-        x = this.start_x - this.stop_x < 0 ? "RIGHT" : "LEFT";
-        y = this.start_y - this.stop_y < 0 ? "DOWN" : "UP";
-        result = x_magnitude > y_magnitude ? x : y;
-        result = this.tap === true ? "TAP" : result;
+        var x_magnitude = Math.abs(this.start_x - this.stop_x);
+        var y_magnitude = Math.abs(this.start_y - this.stop_y);
+        var x = this.start_x - this.stop_x < 0 ? "RIGHT" : "LEFT";
+        var y = this.start_y - this.stop_y < 0 ? "DOWN" : "UP";
+
+        var result =
+          this.tap === true ? "TAP" : x_magnitude > y_magnitude ? x : y;
+
         return result;
       },
     },
