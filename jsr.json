@@ -1,0 +1,6 @@
+{
+  "name": "@georgemandis/konami",
+  "version": "1.7.0",
+  "license": "MIT",
+  "exports": "./konami.js"
+}
